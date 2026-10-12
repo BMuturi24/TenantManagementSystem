@@ -24,7 +24,9 @@ class LoginActivity : AppCompatActivity() {
                 Toast.makeText(this, "Please enter your email and password", Toast.LENGTH_SHORT).show()
                 return@setOnClickListener
             }
-            val intent = Intent(this, MainActivity::class.java)
+            val intent = Intent(this, MainActivity::class.java).apply{
+                putExtra("USER_EMAIL",email)
+            }
             startActivity(intent)
             finish()
         }
