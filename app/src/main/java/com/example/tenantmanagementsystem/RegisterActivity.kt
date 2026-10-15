@@ -2,6 +2,7 @@ package com.example.tenantmanagementsystem
 
 import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.tenantmanagementsystem.databinding.ActivityRegisterBinding
@@ -29,4 +30,35 @@ class RegisterActivity : AppCompatActivity() {
             finish()
         }
     }
+
+    override fun onStart() {
+        super.onStart()
+        Log.d("REGISTER_LIFECYCLE","RegisterActivity: onStart")
+    }
+
+    override fun onResume() {
+        super.onResume()
+        Log.d("REGISTER_LIFECYCLE","RegisterActivity:onResume")
+    }
+
+    override fun onPause() {
+        super.onPause()
+        Log.d("REGISTER_LIFECYCLE","RegisterActivity:onPause")
+    }
+
+    override fun onStop() {
+        super.onStop()
+        Log.d("REGISTER_LIFECYCLE","RegisterActivity:onStop")
+    }
+
+    override fun onRestart() {
+        super.onRestart()
+        Log.d("REGISTER_LIFECYCLE", "RegisterActivity: onRestart")
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        Log.d("REGISTER_LIFECYCLE", "RegisterActivity: onDestroy")
+    }
+
 }
